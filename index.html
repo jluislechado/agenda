@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Agenda</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="estilo/estilo.css"/>
+    </head>
+    <body>
+        <div id="contenedor">
+            <header>
+                <img src="imagenes/cabecera.jpg" id="cabecera"/>
+            </header>
+            <div id="login" class="log">
+                </br></br></br>
+                <span>Usuario: </span><input type="text" name="dni" id="dni" placeholder="DNI"/></br></br>
+                <span>Clave: </span><input type="password" name="clave" id="clave"/></br></br>
+                <input type="button" id="botonEntrar" value="Entrar" class="boton"/>
+            </div>
+            </br>
+            <div id="mensaje" class="oculta">
+                ¡Error! Los datos introducidos no son correctos. Inténtelo de nuevo
+            </div>
+            <!--capa administrador-->
+            <div id="divAdministrador" class="oculta"><br>
+                <h3>ÁREA DE ADMINISTRADOR</h3><br>
+                 <a href="#" id="ins">Insertar usuario</a><br><br>
+                 <a href="#" id="borraU">Borrar usuario</a><br><br>
+                 <a href="#" id="borrarTabla">Borrar datos de la agenda</a>
+            </div>
+            <!--capa insertar usuario-->
+            <div id="divInsertar" class="oculta"><br>
+                <h3>DATOS DEL USUARIO</h3><br>
+                <span>DNI:</span><input type="text" name="dniU" id="dniU"/><br><br>
+                <span>Clave: </span><input type="password" name="claveU" id="claveU"/></br></br>
+                <input type="button" id="botonInsertar" value="Insertar"/>
+            </div>
+            <!--capa mensaje insertar-->
+            <div id="divMensaje" class="oculta"><br>
+                <span id="msj"></span></br></br>
+                <a href="#" id="volverA">-> Volver</a>
+            </div>
+            <!--capa listaUsuarios-->
+            <div id="divUsuarios" class="oculta">
+                <h3> &nbsp;&nbsp;&nbsp;&nbsp;LISTADO DE USUARIOS</h3>
+            </div>
+            <!--capa agenda--->
+            <div id="divAgenda" class="oculta">
+                <div ><a id="cerrar" href="#">-> Cerrar Sesión</a></div>
+                <table border="1">
+                    <thead>
+                        <th></th>
+                        <th>LUNES</th>
+                        <th>MARTES</th>
+                        <th>MIÉRCOLES</th>
+                        <th>JUEVES</th>
+                        <th>VIERNES</th>
+                        <th>SÁBADO</th>
+                        <th>DOMINGO</th>
+                   </thead>
+                   <tr>
+                       <td class="hora">8h</td>
+                       <td><a href="#" id="lunes_8" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_8" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_8" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_8" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_8" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_8" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_8" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                         <td class="hora">9h</td>
+                       <td><a href="#" id="lunes_9" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_9" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_9" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_9" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_9" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_9" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_9">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                        <td class="hora">10h</td>
+                       <td><a href="#" id="lunes_10" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_10" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_10" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_10" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_10" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_10" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_10" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                       <td class="hora">11h</td>
+                       <td><a href="#" id="lunes_11" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_11" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_11" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_11" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_11" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_11" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_11" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                        <td class="hora">12h</td>
+                       <td><a href="#" id="lunes_12" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_12" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_12" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_12" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_12" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_12" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_12" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                        <td class="hora">13h</td>
+                       <td><a href="#" id="lunes_13" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_13" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_13" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_13" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_13" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_13" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_13" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                        <td class="hora">14h</td>
+                       <td><a href="#" id="lunes_14" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_14" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_14" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_14" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_14" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_14" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_14" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                        <td class="hora">15h</td>
+                       <td><a href="#" id="lunes_15" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_15" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_15" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_15" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_15" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_15" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_15" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                        <td class="hora">16h</td>
+                       <td><a href="#" id="lunes_16" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_16" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_16" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_16" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_16" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_16" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_16" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                        <td class="hora">17h</td>
+                       <td><a href="#" id="lunes_17" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_17" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_17" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_17" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_17" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_17" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_17" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                        <td class="hora">18h</td>
+                       <td><a href="#" id="lunes_18" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_18" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_18" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_18" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_18" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_18" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_18" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                        <td class="hora">19h</td>
+                       <td><a href="#" id="lunes_19" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_19" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_19" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_19" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_19" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_19" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_19" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                        <td class="hora">20h</td>
+                       <td><a href="#" id="lunes_20" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_20" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_20" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_20" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_20" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_20" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_20" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                        <td class="hora">21h</td>
+                       <td><a href="#" id="lunes_21" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_21" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_21" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_21" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_21" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_21" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_21" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+                   <tr>
+                        <td class="hora">22h</td>
+                       <td><a href="#" id="lunes_22" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="martes_22" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="miercoles_22" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="jueves_22" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="viernes_22" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="sabado_22" class="cuadrado">DISPONIBLE</a></td>
+                       <td><a href="#" id="domingo_22" class="cuadrado">DISPONIBLE</a></td>
+                   </tr>
+ 
+  </table> 
+  </div>
+        </div>
+        <script src="js/ajax.js"></script>
+        <script src="js/agenda.js"></script>
+    </body>
+</html>
